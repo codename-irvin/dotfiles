@@ -1,0 +1,121 @@
+themes {
+    bearded-monokai-black {
+        text_unselected {
+            base 199 199 199
+            background 20 20 20
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 171 145 242
+        }
+        text_selected {
+            base 20 20 20
+            background 143 143 143
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 171 145 242
+        }
+        ribbon_selected {
+            base 20 20 20
+            background 120 220 232
+            emphasis_0 252 106 103
+            emphasis_1 255 216 102
+            emphasis_2 233 145 227
+            emphasis_3 120 232 198
+        }
+        ribbon_unselected {
+            base 84 84 84
+            background 14 14 14
+            emphasis_0 252 106 103
+            emphasis_1 143 143 143
+            emphasis_2 120 232 198
+            emphasis_3 233 145 227
+        }
+        table_title {
+            base 120 220 232
+            background 0
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 233 145 227
+        }
+        table_cell_selected {
+            base 20 20 20
+            background 143 143 143
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 233 145 227
+        }
+        table_cell_unselected {
+            base 199 199 199
+            background 20 20 20
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 233 145 227
+        }
+        list_selected {
+            base 20 20 20
+            background 143 143 143
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 233 145 227
+        }
+        list_unselected {
+            base 199 199 199
+            background 20 20 20
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 120 220 232
+            emphasis_3 233 145 227
+        }
+        frame_selected {
+            base 169 220 118
+            background 0
+            emphasis_0 255 216 102
+            emphasis_1 169 220 118
+            emphasis_2 233 145 227
+            emphasis_3 0
+        }
+        frame_highlight {
+            base 255 216 102
+            background 0
+            emphasis_0 233 145 227
+            emphasis_1 255 216 102
+            emphasis_2 255 216 102
+            emphasis_3 255 216 102
+        }
+        exit_code_success {
+            base 169 220 118
+            background 0
+            emphasis_0 169 220 118
+            emphasis_1 20 20 20
+            emphasis_2 233 145 227
+            emphasis_3 120 232 198
+        }
+        exit_code_error {
+            base 252 106 103
+            background 0
+            emphasis_0 255 152 103
+            emphasis_1 0
+            emphasis_2 0
+            emphasis_3 0
+        }
+        multiplayer_user_colors {
+            player_1 255 97 136
+            player_2 120 232 198
+            player_3 120 220 232
+            player_4 255 216 102
+            player_5 169 220 118
+            player_6 171 145 242
+            player_7 233 145 227
+            player_8 252 106 103
+            player_9 255 152 103
+            player_10 143 143 143
+        }
+    }
+}
+

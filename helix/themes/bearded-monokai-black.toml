@@ -1,0 +1,157 @@
+# Bearded Theme Monokai Black for Helix
+# Ported from VS Code Bearded Theme
+
+"ui.background" = { bg = "#141414" }
+"ui.text" = "#c7c7c7"
+"ui.text.focus" = "#c7c7c7"
+"ui.text.inactive" = "#545454"
+
+"ui.cursor" = { fg = "#141414", bg = "#ffd866" }
+"ui.cursor.primary" = { fg = "#141414", bg = "#ffd866" }
+"ui.cursor.match" = { fg = "#141414", bg = "#8f8f8f4d" }
+
+"ui.selection" = { bg = "#8f8f8f4d" }
+"ui.selection.primary" = { bg = "#8f8f8f4d" }
+
+"ui.linenr" = { fg = "#383e3a" }
+"ui.linenr.selected" = { fg = "#919191" }
+
+"ui.statusline" = { fg = "#adadad80", bg = "#141414" }
+"ui.statusline.inactive" = { fg = "#545454", bg = "#0e0e0e" }
+"ui.statusline.normal" = { fg = "#0e533e", bg = "#78e8c6" }
+"ui.statusline.insert" = { fg = "#664c00", bg = "#ffd866" }
+"ui.statusline.select" = { fg = "#661461", bg = "#e991e3" }
+
+"ui.popup" = { fg = "#adadad", bg = "#212121" }
+"ui.window" = { fg = "#050505" }
+"ui.menu" = { fg = "#adadad", bg = "#191919" }
+"ui.menu.selected" = { fg = "#c7c7c7", bg = "#2e2e2e" }
+"ui.menu.scroll" = { fg = "#c7c7c7", bg = "#191919" }
+
+"ui.help" = { fg = "#c7c7c7", bg = "#212121" }
+"ui.virtual.whitespace" = "#54545460"
+"ui.virtual.ruler" = { bg = "#54545433" }
+"ui.virtual.indent-guide" = "#54545433"
+"ui.virtual.inlay-hint" = { fg = "#adadad90", bg = "#adadad20" }
+
+"ui.cursorline.primary" = { bg = "#8f8f8f0f" }
+"ui.cursorcolumn.primary" = { bg = "#8f8f8f0f" }
+
+"ui.bufferline" = { fg = "#545454", bg = "#0e0e0e" }
+"ui.bufferline.active" = { fg = "#8f8f8f", bg = "#141414" }
+
+# Syntax highlighting
+"comment" = { fg = "#cfbfbf59", modifiers = ["italic"] }
+
+"constant" = "#fc6a67"
+"constant.numeric" = "#fc9867"
+"constant.character" = "#fc6a67"
+"constant.character.escape" = "#e991e3"
+"constant.builtin" = "#fc6a67"
+
+"string" = "#a9dc76"
+"string.regexp" = "#a9dc76"
+"string.special" = "#a9dc76"
+
+"variable" = "#ff6188"
+"variable.builtin" = "#fc9867"
+"variable.parameter" = "#e991e3"
+"variable.other" = "#ff6188"
+"variable.other.member" = "#fc9867"
+
+"function" = "#78dce8"
+"function.builtin" = "#78dce8"
+"function.macro" = "#78dce8"
+"function.method" = "#78dce8"
+
+"type" = "#ab9df2"
+"type.builtin" = "#ab9df2"
+"type.enum" = "#ab9df2"
+"type.enum.variant" = "#78dce8"
+
+"constructor" = "#ab9df2"
+
+"keyword" = "#ffd866"
+"keyword.control" = "#ffd866"
+"keyword.control.import" = "#ffd866"
+"keyword.control.return" = "#ffd866"
+"keyword.control.conditional" = "#ffd866"
+"keyword.control.repeat" = "#ffd866"
+"keyword.operator" = "#ffd866"
+"keyword.function" = "#78e8c6"
+"keyword.storage" = "#78e8c6"
+"keyword.storage.type" = "#78e8c6"
+"keyword.storage.modifier" = "#78e8c6"
+
+"operator" = "#c7c7c760"
+"punctuation" = "#c7c7c760"
+"punctuation.delimiter" = "#c7c7c760"
+"punctuation.bracket" = "#c7c7c760"
+"punctuation.special" = "#c7c7c760"
+
+"attribute" = "#e991e3"
+"namespace" = "#78dce8"
+"module" = "#fc9867"
+
+"label" = "#ffd866"
+"tag" = "#78dce8"
+"tag.attribute" = "#ffd866"
+
+"special" = "#e991e3"
+
+"markup.heading" = { fg = "#ffd866", modifiers = ["bold"] }
+"markup.bold" = { fg = "#ff6188", modifiers = ["bold"] }
+"markup.italic" = { fg = "#fc9867", modifiers = ["italic"] }
+"markup.strikethrough" = { fg = "#fc6a67", modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "#78dce8", modifiers = ["underlined"] }
+"markup.link.text" = "#78dce8"
+"markup.raw" = "#ab9df2"
+"markup.raw.inline" = "#ab9df2"
+"markup.raw.block" = "#ab9df2"
+"markup.list" = "#78dce8"
+"markup.quote" = "#e991e3"
+
+"diff.plus" = "#a9dc76"
+"diff.minus" = "#fc6a67"
+"diff.delta" = "#78dce8"
+
+"diagnostic.error" = { underline = { color = "#fc6a67", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "#ffd866", style = "curl" } }
+"diagnostic.info" = { underline = { color = "#78dce8", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "#78dce8", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+"error" = "#fc6a67"
+"warning" = "#ffd866"
+"info" = "#78dce8"
+"hint" = "#78dce8"
+
+# Git gutter
+"diff.plus.gutter" = "#a9dc76cc"
+"diff.minus.gutter" = "#fc6a67cc"
+"diff.delta.gutter" = "#78dce8cc"
+
+# Bracket matching colors (matching VS Code's editorBracketHighlight)
+"ui.highlight" = { bg = "#8f8f8f4d" }
+
+[palette]
+# Core colors
+background = "#141414"
+background-dark = "#0e0e0e"
+background-light = "#212121"
+foreground = "#c7c7c7"
+foreground-dim = "#adadad"
+gray = "#545454"
+accent = "#8f8f8f"
+
+# Syntax colors
+red = "#fc6a67"
+pink = "#ff6188"
+orange = "#fc9867"
+yellow = "#ffd866"
+green = "#a9dc76"
+teal = "#78e8c6"
+cyan = "#78dce8"
+purple = "#ab9df2"
+magenta = "#e991e3"
