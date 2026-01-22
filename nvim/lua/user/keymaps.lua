@@ -6,9 +6,13 @@ local keymap = vim.keymap.set
 keymap('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Toggle File Explorer' })
 
 -- Telescope keybindgs
-vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = 'Find Files' })
-vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = 'Search Text' })
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<leader>g', require('telescope.builtin').live_grep, { desc = 'Search Text' })
 
+-- Buffer navigation
+keymap('n', 'ga', ':bprevious<CR>', { desc = 'Previous Buffer' })
+
+-- LSP-related bindings
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
     callback = function(ev)
