@@ -75,7 +75,7 @@ require("lazy").setup({
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
-            local configs = require("nvim-treesitter")
+            local configs   = require("nvim-treesitter")
 
             configs.setup({
                 ensure_installed = { "lua", "rust", "zig", "c", "cpp", "python", "vimdoc", "javascript", "typescript" },
@@ -87,6 +87,35 @@ require("lazy").setup({
                 indent = { enable = true },
             })
         end,
+    },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "williamboman/mason-lspconfig.nvim",
+        },
+        config = function()
+            require("mason").setup()
+            require("mason-lspconfig").setup({
+                ensure_installed = { "rust_analyzer", "lua_ls", "zls" }
+            })
+
+            -- 1. Configure the server (The "New" Way)
+            vim.lsp.config('rust_analyzer', {
+                settings = {
+                    ["rust-analyzer"] = {
+                        checkOnSave = { command = "check" },
+                        procMacro = { enable = true },
+                        -- Add your specific Rust tweaks here
+                    }
+                }
+            })
+
+            -- 2. Enable the server
+            vim.lsp.enable("rust_analyzer")
+            vim.lsp.enable("lua_ls")
+            vim.lsp.enable("zls")
+        end
     }
 })
 
