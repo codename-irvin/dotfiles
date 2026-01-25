@@ -103,17 +103,6 @@ require('lazy').setup({
                 ensure_installed = { 'rust_analyzer', 'lua_ls', 'zls' }
             })
 
-            -- 1. Configure the server (The 'New' Way)
-            vim.lsp.config('rust_analyzer', {
-                settings = {
-                    ['rust-analyzer'] = {
-                        checkOnSave = { command = 'check' },
-                        procMacro = { enable = true },
-                        -- Add your specific Rust tweaks here
-                    }
-                }
-            })
-
             -- 2. Enable the server
             vim.lsp.enable('rust_analyzer')
             vim.lsp.enable('lua_ls')

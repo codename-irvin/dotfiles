@@ -51,7 +51,7 @@
 
 # General config
 theme = bearded-monokai-black
-font-size = 16
+font-size = 14
 initial-command = zellij
 
 # Keybinds
