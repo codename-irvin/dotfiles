@@ -108,6 +108,43 @@ require('lazy').setup({
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('zls')
         end
+    },
+    {
+        "hrsh7th/nvim-cmp",
+        event = "InsertEnter", -- Load only when entering insert mode
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp", -- Required for LSP completion
+            "hrsh7th/cmp-buffer",   -- Suggestions from current buffer
+            "hrsh7th/cmp-path",     -- File path suggestions
+            "L3MON4D3/LuaSnip",     -- Required snippet engine
+            "saadparwaiz1/cmp_luasnip",
+        },
+        config = function()
+            local cmp = require("cmp")
+            cmp.setup({
+                snippet = {
+                    expand = function(args)
+                        require("luasnip").lsp_expand(args.body) -- Required for snippets to work
+                    end,
+                },
+                mapping = cmp.mapping.preset.insert({
+                    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+                    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+                    ["<C-Space>"] = cmp.mapping.complete(), -- Manually trigger menu
+                    ["<C-e>"] = cmp.mapping.abort(),
+                    ["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept suggestion
+                }),
+                sources = cmp.config.sources({
+                    { name = "nvim_lsp" }, -- Prioritize LSP suggestions
+                    { name = "luasnip" },
+                }, {
+                    { name = "buffer" },
+                }),
+                experimental = {
+                    ghost_text = true, -- This enables the inline "ghost" suggestions
+                },
+            })
+        end,
     }
 })
 
